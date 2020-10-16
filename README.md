@@ -2127,6 +2127,12 @@ bandwidth.
 NATGW cannot do port forwarding or be a bastion server. In that case it might
 be necessary to run a NAT EC2 instance instead.
 
+Security Groups cannot be used with NATGW. Only NACLs can be used.
+If Security Groups are required, then a NAT instance can be used instead.
+
+NAT isn't required for IPv6, as all IPv6 addresses in AWS are publicly routable.
+NATGW don't work with IPv6.
+
 ---
 
 ## Elastic-Cloud-Compute-EC2
